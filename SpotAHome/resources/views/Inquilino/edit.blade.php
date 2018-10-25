@@ -62,11 +62,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <textarea name="telefono" class="form-control input-sm"  id="telefono">{{$inquilinos->telefono}}</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="fecha_nacimiento" class="form-control input-sm"  id="fecha_nacimiento">{{$inquilinos->fecha_nacimiento}}</textarea>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="telefono" class="form-control input-sm"  id="telefono" value="{{$inquilinos->telefono}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="date" name="fecha_nacimiento" class="form-control input-sm"  id="fecha_nacimiento" value="{{$inquilinos->fecha_nacimiento}}">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
@@ -80,12 +86,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <textarea name="usuario" class="form-control input-sm" id="usuario">{{$inquilinos->usuario}}</textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <textarea name="contraseña" class="form-control input-sm" id="contraseña">{{$inquilinos->contraseña}}</textarea>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="usuario" class="form-control input-sm" id="usuario" value="{{$inquilinos->usuario}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="contraseña" class="form-control input-sm" id="contraseña" value="{{$inquilinos->contraseña}}">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
