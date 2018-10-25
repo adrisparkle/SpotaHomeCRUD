@@ -31,7 +31,7 @@
                         <div class="pull-left"><h3>Lista Inquilinos</h3></div>
                         <div class="pull-right">
                             <div class="btn-group">
-                                <a href="{{ route('Inquilino.create') }}" class="btn btn-info" >Añadir Inquilino</a>
+                                <a href="{{ route('inquilino.create') }}" class="btn btn-info" >Añadir Inquilino</a>
                             </div>
                         </div>
                         <div class="table-container">
@@ -78,7 +78,7 @@
                             </table>
                         </div>
                     </div>
-                    {{ $inquilino->links() }}
+                    {{ $inquilinos->links() }}
                 </div>
             </div>
         </section>

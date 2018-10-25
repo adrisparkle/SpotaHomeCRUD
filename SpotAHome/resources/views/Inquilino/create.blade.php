@@ -48,12 +48,13 @@
                     </div>
                     <div class="panel-body">
                         <div class="table-container">
-                            <form method="POST" action="{{ route('Inquilino.store') }}"  role="form">
+                            <form method="POST" action="{{ route('inquilino.store') }}"  role="form">
                                 {{ csrf_field() }}
                                 <div class="row">
+                                    <input type="text" name="id_inquilinos" class="form-control input-sm" id="id_inquilinos" value="1" hidden="true">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre del libro">
+                                            <input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre del inquilino">
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
@@ -98,7 +99,7 @@
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <input type="submit"  value="Guardar" class="btn btn-success btn-block">
-                                        <a href="{{ route('Inquilino.index') }}" class="btn btn-info btn-block" >Atrás</a>
+                                        <a href="{{ route('inquilino.index') }}" class="btn btn-info btn-block" >Atrás</a>
                                     </div>
 
                                 </div>

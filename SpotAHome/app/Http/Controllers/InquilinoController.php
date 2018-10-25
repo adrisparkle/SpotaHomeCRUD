@@ -15,9 +15,9 @@ class InquilinoController extends Controller
     public function index()
     {
         //Supongo la llamada a la bdd y la paginacion
-        $inquilinos=Inquilino::orderBy('id','DESC')->paginate(3);
+        $inquilinos=Inquilino::orderBy('id','DESC')->paginate(10);
         //retorna la vista
-        return view('Inquilino.index', compact('inquilinos'));
+        return view('inquilino.index', compact('inquilinos'));
 
     }
 
@@ -29,7 +29,7 @@ class InquilinoController extends Controller
     public function create()
     {
         //Esto si no entiendo, una vista supongo
-        return view('Inquilino.create');
+        return view('inquilino.create');
     }
 
     /**
@@ -42,8 +42,8 @@ class InquilinoController extends Controller
     {
         //
         $this->validate($request,['nombre'=>'required','email'=>'required','telefono'=>'required','fecha_nacimiento'=>'required','genero'=>'required','nacionalidad'=>'required','usuario'=>'required','contraseña'=>'required']);
-        Inquilino::created($request->all());
-        return redirect()->route('Inquilino.index')->with('success','Registro creado satisfactoriamente');
+        Inquilino::create($request->all());
+        return redirect()->route('inquilino.index')->with('success','Registro creado satisfactoriamente');
 
     }
 
@@ -57,7 +57,7 @@ class InquilinoController extends Controller
     {
         //
         $inquilinos=Inquilino::find($id);
-        return view('Inquilino.show', compact('inquilinos'));
+        return view('inquilino.show', compact('inquilinos'));
     }
 
     /**
@@ -70,7 +70,7 @@ class InquilinoController extends Controller
     {
         //
         $inquilinos=Inquilino::find($id);
-        return view('Inquilino.edit',compact('inquilinos'));
+        return view('inquilino.edit',compact('inquilinos'));
     }
 
     /**
@@ -86,7 +86,7 @@ class InquilinoController extends Controller
         $this->validate($request,['nombre'=>'required','email'=>'required','telefono'=>'required','fecha_nacimiento'=>'required','genero'=>'required','nacionalidad'=>'required','usuario'=>'required','contraseña'=>'required']);
         Inquilino::find($id)->update($request->all());
 
-        return redirect()->route('Inquilino.index')->with('success','Registro actualizado satisfactoriamente');
+        return redirect()->route('inquilino.index')->with('success','Registro actualizado satisfactoriamente');
 
     }
 
@@ -100,6 +100,6 @@ class InquilinoController extends Controller
     {
         //
         Inquilino::find($id)->delete();
-        return redirect()->route('Inquilino.index')->with('success','Registro eliminado satisfactoriamente');
+        return redirect()->route('inquilino.index')->with('success','Registro eliminado satisfactoriamente');
     }
 }
