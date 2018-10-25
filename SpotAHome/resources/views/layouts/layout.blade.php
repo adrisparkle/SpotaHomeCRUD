@@ -19,9 +19,5 @@
 
     }
 </style>
-
-//aqui va tu codigo amigo
-
-
 </body>
 </html>

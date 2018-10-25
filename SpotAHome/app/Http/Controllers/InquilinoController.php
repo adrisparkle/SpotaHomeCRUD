@@ -14,9 +14,9 @@ class InquilinoController extends Controller
      */
     public function index()
     {
-        //Supongo la llamada a la bdd y la paginacion
-        $inquilinos=Inquilino::orderBy('id','DESC')->paginate(10);
-        //retorna la vista
+        //Paginacion!
+        $inquilinos=Inquilino::orderBy('id_inquilinos','ASC')->paginate(5);
+
         return view('inquilino.index', compact('inquilinos'));
 
     }

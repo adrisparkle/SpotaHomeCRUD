@@ -20,12 +20,11 @@
     }
 </style>
 
-//codigo de crud
 @extends('layouts.layout')
 @section('content')
     <div class="row">
         <section class="content">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-xs-12 col-sm-12 col-md-12" align="centers">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="pull-left"><h3>Lista Inquilinos</h3></div>
@@ -58,9 +57,9 @@
                                             <td>{{$inquilino->nacionalidad}}</td>
                                             <td>{{$inquilino->usuario}}</td>
                                             <td>{{$inquilino->contraseña}}</td>
-                                            <td><a class="btn btn-primary btn-xs" href="{{action('InquilinoController@edit', $inquilino->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
+                                            <td><a class="btn btn-primary btn-xs" href="{{action('InquilinoController@edit', $inquilino->id_inquilinos)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                                             <td>
-                                                <form action="{{action('InquilinoController@destroy', $inquilino->id)}}" method="post">
+                                                <form action="{{action('InquilinoController@destroy', $inquilino->id_inquilinos)}}" method="post">
                                                     {{csrf_field()}}
                                                     <input name="_method" type="hidden" value="DELETE">
 

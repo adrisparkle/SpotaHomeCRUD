@@ -15,8 +15,15 @@ class Inquilino extends Authenticatable
      *
      * @var array
      */
+    //Problemas con el id
+    protected $primaryKey = 'id_inquilinos';
+    //pa que no se elimine jeje
+    protected $dates = ['deleted_at'];
+    protected $table = "inquilinos";
+
+    //ya lo normalillo del modelo
     protected $fillable = [
-        'id_inquilinos', 'nombre', 'email', 'telefono', 'fecha_nacimiento','genero','nacionalidad','usuario',
+        'id_inquilinos', 'nombre', 'email', 'telefono', 'fecha_nacimiento','genero','nacionalidad','usuario', 'contraseña'
     ];
 
     /**
@@ -25,6 +32,6 @@ class Inquilino extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'contrasena',
+        'contraseña',
     ];
 }

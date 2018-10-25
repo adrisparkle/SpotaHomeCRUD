@@ -20,7 +20,6 @@
     }
 </style>
 
-//aqui va tu codigo amigo
 @extends('layouts.layout')
 @section('content')
     <div class="row">
@@ -48,50 +47,51 @@
                     </div>
                     <div class="panel-body">
                         <div class="table-container">
-                            <form method="POST" action="{{ route('inquilino.update',$inquilino->id) }}"  role="form">
+                            <form method="POST" action="{{ route('inquilino.update',$inquilinos->id_inquilinos) }}"  role="form">
                                 {{ csrf_field() }}
                                 <input name="_method" type="hidden" value="PATCH">
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="nombre" id="nombre" class="form-control input-sm" value="{{$inquilino->nombre}}">
+                                            <input type="text" name="nombre" id="nombre" class="form-control input-sm" value="{{$inquilinos->nombre}}">
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="email" id="email" class="form-control input-sm" value="{{$inquilino->email}}">
+                                            <input type="text" name="email" id="email" class="form-control input-sm" value="{{$inquilinos->email}}">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="telefono" class="form-control input-sm"  id="telefono">{{$inquilino->telefono}}</textarea>
+                                    <textarea name="telefono" class="form-control input-sm"  id="telefono">{{$inquilinos->telefono}}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="fecha_nacimiento" class="form-control input-sm"  id="fecha_nacimiento">{{$inquilino->fecha_nacimiento}}</textarea>
+                                    <textarea name="fecha_nacimiento" class="form-control input-sm"  id="fecha_nacimiento">{{$inquilinos->fecha_nacimiento}}</textarea>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="genero" id="genero" class="form-control input-sm" value="{{$inquilino->genero}}">
+                                            <input type="text" name="genero" id="genero" class="form-control input-sm" value="{{$inquilinos->genero}}">
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="nacionalidad" id="nacionalidad" class="form-control input-sm" value="{{$inquilino->nacionalidad}}">
+                                            <input type="text" name="nacionalidad" id="nacionalidad" class="form-control input-sm" value="{{$inquilinos->nacionalidad}}">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="usuario" class="form-control input-sm" id="usuario">{{$inquilino->usuario}}</textarea>
+                                    <textarea name="usuario" class="form-control input-sm" id="usuario">{{$inquilinos->usuario}}</textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea name="contraseña" class="form-control input-sm" id="contraseña">{{$inquilino->contraseña}}</textarea>
+                                    <textarea name="contraseña" class="form-control input-sm" id="contraseña">{{$inquilinos->contraseña}}</textarea>
                                 </div>
                                 <div class="row">
-
-                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
                                         <input type="submit"  value="Actualizar" class="btn btn-success btn-block">
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
                                         <a href="{{ route('inquilino.index') }}" class="btn btn-info btn-block" >Atrás</a>
                                     </div>
 
