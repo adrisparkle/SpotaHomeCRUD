@@ -29,3 +29,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin/home', 'HomeAdminController@index')->name('home.admin');
 
+//CRUD
+Route::resource('inquilino','InquilinoController');
