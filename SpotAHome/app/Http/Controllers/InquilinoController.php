@@ -12,7 +12,7 @@ class InquilinoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    /* DESCOMENTAR
+
     public function index()
     {
         //Paginacion!
@@ -21,7 +21,7 @@ class InquilinoController extends Controller
         return view('inquilino.index', compact('inquilinos'));
 
     }
-*/
+
     /**
      * Show the form for creating a new resource.
      *
